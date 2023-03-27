@@ -1,0 +1,143 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:7902030358703073066",
+      "lastPropertyId": "4:6248849718502569820",
+      "name": "EstadoModel",
+      "properties": [
+        {
+          "id": "1:2760128357272489300",
+          "name": "id",
+          "type": 6,
+          "flags": 129
+        },
+        {
+          "id": "2:8480054918145046216",
+          "name": "edoName",
+          "type": 9
+        },
+        {
+          "id": "3:1845900568252224603",
+          "name": "capital",
+          "type": 9
+        },
+        {
+          "id": "4:6248849718502569820",
+          "name": "poblacion",
+          "type": 9
+        }
+      ],
+      "relations": [
+        {
+          "id": "1:4607524802689920693",
+          "name": "lsLibreria",
+          "targetId": "2:1852176079784171399"
+        }
+      ]
+    },
+    {
+      "id": "2:1852176079784171399",
+      "lastPropertyId": "6:5980347005503306193",
+      "name": "LibreriaModel",
+      "properties": [
+        {
+          "id": "1:3414518276157725121",
+          "name": "id",
+          "type": 6,
+          "flags": 129
+        },
+        {
+          "id": "2:1301531933215251832",
+          "name": "libName",
+          "type": 9
+        },
+        {
+          "id": "3:3562970971263115665",
+          "name": "direccion",
+          "type": 9
+        },
+        {
+          "id": "4:4038442046642212394",
+          "name": "telefono",
+          "type": 9
+        },
+        {
+          "id": "5:4913779077390006015",
+          "name": "correo",
+          "type": 9
+        },
+        {
+          "id": "6:5980347005503306193",
+          "name": "estadoId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "1:5829204197197656492",
+          "relationTarget": "EstadoModel"
+        }
+      ],
+      "relations": [
+        {
+          "id": "2:4735243646053464414",
+          "name": "lsLibro",
+          "targetId": "3:2127972266999619810"
+        }
+      ]
+    },
+    {
+      "id": "3:2127972266999619810",
+      "lastPropertyId": "6:770384257393831544",
+      "name": "LibroModel",
+      "properties": [
+        {
+          "id": "1:6165170761527002683",
+          "name": "id",
+          "type": 6,
+          "flags": 129
+        },
+        {
+          "id": "2:5085383246993243470",
+          "name": "libroName",
+          "type": 9
+        },
+        {
+          "id": "3:1324416517032619478",
+          "name": "autor",
+          "type": 9
+        },
+        {
+          "id": "4:3102871739131180162",
+          "name": "editorial",
+          "type": 9
+        },
+        {
+          "id": "5:1543479914537198051",
+          "name": "paginas",
+          "type": 9
+        },
+        {
+          "id": "6:770384257393831544",
+          "name": "libreriaId",
+          "type": 11,
+          "flags": 520,
+          "indexId": "2:1314721661438329954",
+          "relationTarget": "LibreriaModel"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "3:2127972266999619810",
+  "lastIndexId": "2:1314721661438329954",
+  "lastRelationId": "2:4735243646053464414",
+  "lastSequenceId": "0:0",
+  "modelVersion": 5,
+  "modelVersionParserMinimum": 5,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
