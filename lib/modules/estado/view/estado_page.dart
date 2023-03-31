@@ -143,6 +143,7 @@ class _EstadoPageState extends State<EstadoPage> {
                 
                 title: Text(
                   lsLibrerias[index].libName,
+                  textAlign: TextAlign.center,
                 ),
               ),
             ),

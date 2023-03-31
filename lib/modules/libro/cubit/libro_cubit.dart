@@ -14,8 +14,13 @@ class LibroCubit extends Cubit<LibroState> {
 
   final LibroController _libroController = LibroController();
 
-  Future<void> init({required int idLibreria}) async{
+  Future<void> init({required int idLibreria, required int idLibro}) async{
     final libreria = LibreriaController().getById(idLibreria);
+    
+    if(idLibro == -1){
+      final libro = LibroController().getById(idLibro);
+      emit(state.copyWith(libro: libro));
+    }
     emit(state.copyWith(libreriaModel: libreria));
     await getAll();
   }

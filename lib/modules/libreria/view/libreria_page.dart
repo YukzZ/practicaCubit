@@ -48,7 +48,7 @@ class _LibreriaPageState extends State<LibreriaPage> {
                             idLibreria: state.lsLibreria[index].id,
                           ),
                         ),
-                      ).then((value) => _cubit.getAll());
+                      ).then((value) => _cubit.init(idEstado: widget.idEstado));
                     },
                     child: Column(
                       children: [

@@ -24,7 +24,7 @@ class _LibroPageState extends State<LibroPage> {
       ),
       body: BlocProvider(
         create: (context) => LibroCubit()
-            ..init(idLibreria: widget.idLibreria),
+            ..init(idLibreria: widget.idLibreria, idLibro: -1),
         child: BlocBuilder<LibroCubit, LibroState>(
           builder: (context, state) {
             _cubit = context.read<LibroCubit>();
@@ -49,6 +49,10 @@ class _LibroPageState extends State<LibroPage> {
                             editorial: state.lsLibros[index].editorial,
                             paginas: state.lsLibros[index].paginas,
                           ),
+                        ),
+                      ).then((value) => _cubit.init(
+                          idLibreria: widget.idLibreria,
+                          idLibro: state.lsLibros[index].id,
                         ),
                       );
                     },

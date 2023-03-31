@@ -34,7 +34,10 @@ class _LibroDetallePageState extends State<LibroDetallePage> {
         title: Text('Detalles de Libro ${widget.libroName}'),
       ),
       body: BlocProvider(
-        create: (context) => LibroCubit()..init(idLibreria: widget.idLibreria),
+        create: (context) => LibroCubit()..init(
+          idLibreria: widget.idLibreria, 
+          idLibro: widget.id,
+        ),
         child: BlocBuilder<LibroCubit, LibroState>(
           builder: (context, state) {
             _cubit = context.read<LibroCubit>();
